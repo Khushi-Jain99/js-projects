@@ -1,0 +1,88 @@
+/* Reset and Basic Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navbar Styling */
+nav {
+  background-color: #4a90e2;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #357ABD;
+}
+
+/* Main Section */
+.canvas {
+  margin: 80px auto;
+  width: 80%;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Color Boxes */
+.button {
+  width: 80px;
+  height: 80px;
+  margin: 0 10px;
+  border: 2px solid #333;
+  display: inline-block;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Color IDs */
+#sky {
+  background: #4cc9f0;
+}
+#pink {
+  background: #f72585;
+}
+#purple {
+  background: #7209b7;
+}
+#blue {
+  background: #3a0ca3;
+}
+
+
+/* Instruction Text */
+span {
+  display: block;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+}

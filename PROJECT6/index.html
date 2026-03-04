@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Magic - Interactive Background Changer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+    <nav>
+        <a href="../index.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            </svg>
+            Home
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="icon-wrapper">
+                <svg class="palette-icon" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="8" cy="10" r="1.5" fill="currentColor"></circle>
+                    <circle cx="12" cy="8" r="1.5" fill="currentColor"></circle>
+                    <circle cx="16" cy="10" r="1.5" fill="currentColor"></circle>
+                    <circle cx="14" cy="14" r="1.5" fill="currentColor"></circle>
+                    <circle cx="10" cy="14" r="1.5" fill="currentColor"></circle>
+                </svg>
+            </div>
+            
+            <h1>Color Magic</h1>
+            <p class="subtitle">Experience an endless palette of colors</p>
+
+            <div class="color-display">
+                <div class="color-box" id="colorBox"></div>
+                <div class="color-info">
+                    <span class="color-label">Current Color</span>
+                    <span class="color-code" id="colorCode">#F4F4F4</span>
+                    <button class="copy-btn" id="copyBtn" title="Copy color code">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="start" class="btn btn-start">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Start Magic
+                </button>
+                <button id="stop" class="btn btn-stop">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <rect x="6" y="6" width="12" height="12"></rect>
+                    </svg>
+                    Stop
+                </button>
+            </div>
+
+            <div class="status" id="status">Ready to start</div>
+        </div>
+    </div>
+
+    <div class="background-pattern"></div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
