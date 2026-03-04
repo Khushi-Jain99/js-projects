@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        </svg>
+        Home
+      </a>
+    <span class="nav-title">Text Editor</span>
+  </nav>
+
+  <div class="container">
+    <h1>📝Text Editor</h1>
+
+    <div class="toolbar">
+      <div class="toolbar-group">
+        <button id="bold" class="btn" title="Bold (Ctrl+B)" aria-label="Bold"><strong>B</strong></button>
+        <button id="italic" class="btn" title="Italic (Ctrl+I)" aria-label="Italic"><em>I</em></button>
+        <button id="underline" class="btn" title="Underline (Ctrl+U)" aria-label="Underline"><u>U</u></button>
+        <button id="strikethrough" class="btn" title="Strikethrough" aria-label="Strikethrough"><s>S</s></button>
+      </div>
+
+      <div class="toolbar-group">
+        <select id="fontSelect" class="select" title="Font family">
+          <option value="Arial">Arial</option>
+          <option value="'Courier New'">Courier New</option>
+          <option value="Georgia">Georgia</option>
+          <option value="'Times New Roman'">Times New Roman</option>
+          <option value="Verdana">Verdana</option>
+          <option value="'Comic Sans MS'">Comic Sans</option>
+          <option value="Trebuchet">Trebuchet</option>
+        </select>
+        <select id="fontSizeSelect" class="select" title="Font size">
+          <option value="12px">12px</option>
+          <option value="14px" selected>14px</option>
+          <option value="16px">16px</option>
+          <option value="18px">18px</option>
+          <option value="20px">20px</option>
+          <option value="24px">24px</option>
+          <option value="28px">28px</option>
+        </select>
+      </div>
+
+      <div class="toolbar-group">
+        <button id="alignLeft" class="btn" title="Align Left" aria-label="Align left">⬅️</button>
+        <button id="alignCenter" class="btn" title="Align Center" aria-label="Align center">⬍</button>
+        <button id="alignRight" class="btn" title="Align Right" aria-label="Align right">➡️</button>
+      </div>
+
+      <div class="toolbar-group">
+        <button id="bulletList" class="btn" title="Bullet List" aria-label="Bullet list">• List</button>
+        <button id="numberList" class="btn" title="Numbered List" aria-label="Numbered list">1. List</button>
+      </div>
+
+      <div class="toolbar-group">
+        <label for="textColor" title="Text Color">🎨 Color:</label>
+        <input type="color" id="textColor" class="color-input" value="#000000">
+        <label for="bgColor" title="Highlight Color">🔆 BG:</label>
+        <input type="color" id="bgColor" class="color-input" value="#FFFF00">
+      </div>
+
+      <div class="toolbar-group">
+        <button id="codeBlock" class="btn" title="Code Block" aria-label="Code block">&lt;/&gt;</button>
+        <button id="undo" class="btn" title="Undo (Ctrl+Z)" aria-label="Undo">↶</button>
+        <button id="redo" class="btn" title="Redo (Ctrl+Y)" aria-label="Redo">↷</button>
+      </div>
+    </div>
+
+    <div class="editor-wrapper">
+      <div id="editor" class="editor" contenteditable="true" spellcheck="true" role="textbox" aria-label="Text editor"></div>
+    </div>
+
+    <div class="status-bar">
+      <span class="stats">
+        📊 Words: <span id="wordCount">0</span> | 
+        📝 Characters: <span id="charCount">0</span>
+      </span>
+      <span class="status" id="status">Ready</span>
+    </div>
+
+    <div class="action-buttons">
+      <button id="clearBtn" class="action-btn danger">🗑️ Clear All</button>
+      <button id="downloadTxt" class="action-btn">📥 Download TXT</button>
+      <button id="downloadHtml" class="action-btn">📥 Download HTML</button>
+      <button id="copyBtn" class="action-btn">📋 Copy Text</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

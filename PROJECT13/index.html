@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jokes Generator - Laugh Out Loud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-link">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      </svg>
+      Home
+    </a>
+    <span class="nav-title">😂 joke.hub</span>
+  </nav>
+
+  <div class="container">
+    <div class="header">
+      <h1>Comedy Central</h1>
+      <p class="subtitle">Your daily dose of laughter and joy!</p>
+    </div>
+
+    <div class="controls-section">
+      <div class="control-group">
+        <label for="jokeType">🎭 Category:</label>
+        <select id="jokeType" class="select">
+          <option value="random">Random</option>
+          <option value="general">General</option>
+          <option value="programming">Programming</option>
+          <option value="knock-knock">Knock Knock</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="safeMode" checked>
+          🛡️ Safe Mode
+        </label>
+      </div>
+    </div>
+
+    <div class="joke-display">
+      <div class="joke-card">
+        <div class="joke-emoji">🎭</div>
+        <div id="joke" class="joke-text">Click the button to get a joke!</div>
+        <div class="joke-footer">
+          <span id="jokeCategory" class="category-badge">Ready</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button id="getJoke" class="btn btn-primary">🎲 Get New Joke</button>
+      <button id="copyJoke" class="btn btn-secondary">📋 Copy</button>
+      <button id="shareJoke" class="btn btn-secondary">📤 Share</button>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-icon">😂</span>
+        <span class="stat-label">Jokes Read</span>
+        <span class="stat-number" id="jokesCount">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">🔥</span>
+        <span class="stat-label">Streak</span>
+        <span class="stat-number" id="streakCount">0</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

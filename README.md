@@ -249,17 +249,6 @@ JS PROJECTS/
    - Double-click `index.html` to open in your browser
    - Navigate to individual projects from the main page
 
-### Running Individual Projects
-
-Each project can be run independently:
-
-```
-JS PROJECTS/PROJECT6/index.html  # Color Magic
-JS PROJECTS/PROJECT7/index.html  # Scroll Experience
-JS PROJECTS/PROJECT8/index.html  # TypeMaster
-JS PROJECTS/PROJECT9/index.html  # CursorMagic
-```
-
 ## 🎨 Features Showcase
 
 ### Design Patterns
@@ -301,7 +290,6 @@ All projects are fully responsive and tested on:
 - ✅ Firefox
 - ✅ Safari
 - ✅ Edge
-- ⚠️ IE11 (limited support)
 
 ## 🎯 Learning Objectives
 
@@ -321,47 +309,10 @@ These projects demonstrate:
 
 Contributions, issues, and feature requests are welcome!
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👨‍💻 Author
-
-**Your Name**
-
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Portfolio: [yourwebsite.com](https://yourwebsite.com)
-
 ## 🙏 Acknowledgments
 
 - Google Fonts for beautiful typography
 - MDN Web Docs for comprehensive documentation
 - The web development community for inspiration
 
-## 📸 Screenshots
-
-### PROJECT 6 - Color Magic
-
-![Color Magic](screenshots/project6.png)
-_Dynamic color changing with real-time display_
-
-### PROJECT 7 - Scroll Experience
-
-![Scroll Experience](screenshots/project7.png)
-_Smooth parallax scrolling effects_
-
-### PROJECT 8 - TypeMaster
-
-![TypeMaster](screenshots/project8.png)
-_Professional typing animation_
-
-### PROJECT 9 - CursorMagic
-
-![CursorMagic](screenshots/project9.png)
-_Interactive custom cursor effects_
-
----
-
 ⭐ **Star this repository** if you find it helpful!
-
-Last Updated: March 2026

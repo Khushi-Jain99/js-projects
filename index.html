@@ -1,84 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>JS PROJECTS</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Collection of JavaScript projects showcasing various web development concepts and techniques.">
+    <title>JavaScript Projects Collection</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="script.js"></script>
   </head>
-  <body style="background-color: #6184d8; color: #4C226A">
+  <body>
     <nav>
-      <h2><a aria-current="page">Home Page</a></h2>
+      <div class="nav-container">
+        <div class="nav-content">
+          <h2 class="nav-title">JavaScript Projects</h2>
+          <span class="project-count">16 Projects</span>
+        </div>
+      </div>
     </nav>
+    
     <main>
-      <h1>JAVA SCRIPT PROJECTS</h1>
-      <div class="projects">
-        <a class="project-link" href="./PROJECT1/index.html">
-            Project 1 - Color Changer </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT2/index.html">
-            Project 2 - BMI Generator </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT3/index.html">
-            Project 3 - Digital Clock </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT4/index.html">
-            Project 4 - Guess The Number </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT5/index.html">
-            Project 5 - Keyboard Check </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT6/index.html">
-            Project 6 - Unlimited Colors </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT7/index.html">
-            Project 7 - Scroll Like NextJS </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT8/index.html">
-            Project 8 - Your Typer Library </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT9/index.html">
-            Project 9 - Mouse Circle </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT10/index.html">
-            Project 10 - Emoji </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT11/index.html">
-            Project 11 - Text Editor </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT12/index.html">
-            Project 12 - Random Image </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT13/index.html">
-            Project 13 - Jokes </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT14/index.html">
-            Project 14 - Cats </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT15/index.html">
-            Project 15 - DOM Crud </a>
-        <br>
-        <br>
-        <a class="project-link" href="./PROJECT16/index.html">
-            Project 16 - Debouncing </a>
-        <br>
-        <br>
+      <div class="hero">
+        <h1>JavaScript Projects Collection</h1>
+        <p class="subtitle">Explore 16 interactive JavaScript projects demonstrating modern web development concepts</p>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number">16</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Learning</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">📚</span>
+            <span class="stat-label">Fun</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="🔍 Search projects..." aria-label="Search projects">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ui">UI/UX</button>
+          <button class="filter-btn" data-filter="game">Games</button>
+          <button class="filter-btn" data-filter="tool">Tools</button>
+          <button class="filter-btn" data-filter="api">API</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <a class="project-card" href="./PROJECT1/index.html" data-category="ui">
+          <div class="project-emoji">🎨</div>
+          <h3>Color Changer</h3>
+          <p>Change background colors dynamically</p>
+          <span class="category-badge">UI/UX</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT2/index.html" data-category="tool">
+          <div class="project-emoji">⚖️</div>
+          <h3>BMI Generator</h3>
+          <p>Calculate Body Mass Index with ease</p>
+          <span class="category-badge">Tools</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT3/index.html" data-category="ui">
+          <div class="project-emoji">🕐</div>
+          <h3>Digital Clock</h3>
+          <p>Real-time digital clock display</p>
+          <span class="category-badge">UI/UX</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT4/index.html" data-category="game">
+          <div class="project-emoji">🎲</div>
+          <h3>Guess the Number</h3>
+          <p>Interactive number guessing game</p>
+          <span class="category-badge">Games</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT5/index.html" data-category="ui">
+          <div class="project-emoji">⌨️</div>
+          <h3>Keyboard Check</h3>
+          <p>Detect and display keyboard events</p>
+          <span class="category-badge">UI/UX</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT6/index.html" data-category="ui">
+          <div class="project-emoji">🌈</div>
+          <h3>Unlimited Colors</h3>
+          <p>Generate random colors infinitely</p>
+          <span class="category-badge">UI/UX</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT7/index.html" data-category="ui">
+          <div class="project-emoji">📜</div>
+          <h3>Scroll Like NextJS</h3>
+          <p>Smooth scrolling animations</p>
+          <span class="category-badge">UI/UX</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT8/index.html" data-category="tool">
+          <div class="project-emoji">✍️</div>
+          <h3>Typer Library</h3>
+          <p>Typing animation effects library</p>
+          <span class="category-badge">Tools</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT9/index.html" data-category="ui">
+          <div class="project-emoji">🔵</div>
+          <h3>Mouse Circle</h3>
+          <p>Interactive circle following mouse</p>
+          <span class="category-badge">UI/UX</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT10/index.html" data-category="ui">
+          <div class="project-emoji">😄</div>
+          <h3>Emoji Generator</h3>
+          <p>Random emoji generator with history</p>
+          <span class="category-badge">UI/UX</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT11/index.html" data-category="tool">
+          <div class="project-emoji">📝</div>
+          <h3>Text Editor</h3>
+          <p>Advanced text editor with formatting</p>
+          <span class="category-badge">Tools</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT12/index.html" data-category="api">
+          <div class="project-emoji">🖼️</div>
+          <h3>Random Image</h3>
+          <p>Fetch random images from API</p>
+          <span class="category-badge">API</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT13/index.html" data-category="api">
+          <div class="project-emoji">😂</div>
+          <h3>Jokes</h3>
+          <p>Get random jokes from API</p>
+          <span class="category-badge">API</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT14/index.html" data-category="api">
+          <div class="project-emoji">🐱</div>
+          <h3>Cats</h3>
+          <p>Fetch random cat images</p>
+          <span class="category-badge">API</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT15/index.html" data-category="tool">
+          <div class="project-emoji">📋</div>
+          <h3>DOM CRUD</h3>
+          <p>Create, Read, Update, Delete operations</p>
+          <span class="category-badge">Tools</span>
+        </a>
+
+        <a class="project-card" href="./PROJECT16/index.html" data-category="tool">
+          <div class="project-emoji">⏱️</div>
+          <h3>Debouncing</h3>
+          <p>Learn about debouncing technique</p>
+          <span class="category-badge">Tools</span>
+        </a>
       </div>
     </main>
   </body>

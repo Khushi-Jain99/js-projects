@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  color: #e2e8f0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(34, 197, 94, 0.2), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.2), transparent 45%),
+    linear-gradient(140deg, #020617 0%, #0f172a 100%);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: rgba(2, 6, 23, 0.85);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
+}
+
+.nav-link:active {
+  transform: translateY(0);
+}
+
+.nav-link svg {
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover svg {
+  transform: scale(1.1);
+}
+
+.container {
+  width: min(1100px, 94vw);
+  margin: 24px auto 32px;
+}
+
+.nav-title {
+  color: #22c55e;
+  font-weight: 700;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 6px;
+}
+
+.hero p {
+  color: #94a3b8;
+}
+
+.control-panel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+#taskInput,
+#prioritySelect {
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+}
+
+#taskInput {
+  flex: 1;
+  min-width: 220px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  background: linear-gradient(120deg, #22c55e, #16a34a);
+  color: #022c22;
+}
+
+.btn.ghost {
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.status-overview {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.pill {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.progress-wrap {
+  margin-bottom: 14px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  transition: width 0.25s ease;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.lane {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 14px;
+  padding: 12px;
+  min-height: 360px;
+}
+
+.lane h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.lane-list {
+  display: grid;
+  gap: 10px;
+}
+
+.task-card {
+  background: #0b1220;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-left: 4px solid #64748b;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.task-card.low {
+  border-left-color: #22c55e;
+}
+
+.task-card.medium {
+  border-left-color: #f59e0b;
+}
+
+.task-card.high {
+  border-left-color: #ef4444;
+}
+
+.task-text {
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.task-meta {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mini-btn {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.mini-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.empty {
+  color: #64748b;
+  font-size: 0.9rem;
+  padding: 6px 2px;
+}
+
+@media (max-width: 900px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+}
